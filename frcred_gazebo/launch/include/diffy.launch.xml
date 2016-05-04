@@ -1,7 +1,7 @@
 <launch>
 
-  <arg name="x" default="0.0" />
-  <arg name="y" default="0.0" />
+  <arg name="x" default="2.0" />
+  <arg name="y" default="2.0" />
 
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
       args="-sdf -x $(arg x) -y $(arg y) -z 0 -model diffy -file $(find frcred_gazebo)/models/diffy/model.sdf "/>
