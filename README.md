@@ -3,7 +3,7 @@ Installation
 
  * sudo apt-get install python-catkin-tools python-wstool python-rosinstall-generator ros-jade-gazebo7-ros-pkgs
  * (temporary workaround) Install ignition-transport from default
- * export ROS\_DISTRO=jade
+ * . /opt/ros/jade/setup.bash
  * mkdir -p ${HOME}/frc\_ws/src
  * cd ${HOME}/frc\_ws/src
  * wget https://bitbucket.org/osrf/frc\_red\_team/raw/default/frcred.rosinstall -O ./.rosinstall
