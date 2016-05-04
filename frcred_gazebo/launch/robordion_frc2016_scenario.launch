@@ -1,0 +1,11 @@
+<launch>
+  <arg name="gzname" default="gazebo"/>
+  <arg name="extra_gazebo_args" default="--verbose"/>
+
+  <include file="$(find frc2016_competition)/launch/frc2016.launch">
+    <arg name="gzname" value="$(arg gzname)" />
+    <arg name="extra_gazebo_args" value="$(arg extra_gazebo_args)" />
+  </include>
+
+  <include file="$(find frcred_gazebo)/launch/include/robordion.launch.xml" />
+</launch>
