@@ -1,4 +1,4 @@
 - hg:
-    local-name: src/frc2016_competition
+    local-name: frc2016_competition
     uri: ssh://hg@bitbucket.org/osrf/frc2016_competition
     version: ign-transport-fix
