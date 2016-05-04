@@ -1,6 +1,6 @@
 Installation
 ============
- * sudo apt-get install ros-jade-joy libignition-msgs-dev python-catkin-tools python-wstool python-rosinstall-generator ros-jade-gazebo7-ros-pkgs
+ * sudo apt-get install ros-jade-joy libignition-msgs-dev python-catkin-tools python-wstool python-rosinstall-generator ros-jade-gazebo7-ros-pkgs ros-jade-joy
  * (temporary workaround) Install ignition-transport from default
  * . /opt/ros/jade/setup.bash
  * mkdir -p ${HOME}/frc\_ws/src
@@ -9,6 +9,11 @@ Installation
  * wstool update
  * cd ${HOME}/frc\_ws
  * catkin init
+
+Joystick setup
+==============
+
+http://wiki.ros.org/joy/Tutorials/ConfiguringALinuxJoystick
 
 Build
 =====
