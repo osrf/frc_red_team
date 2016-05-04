@@ -13,13 +13,21 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GAZEBO_CXX_FLAGS}")
 
 QT4_WRAP_CPP(headers_MOC Teleop.hh)
 
-add_library(teleop SHARED ${headers_MOC}
+add_library(teleop_gazebo_plugin SHARED ${headers_MOC}
   Teleop.cc)
-target_link_libraries(teleop ${GAZEBO_LIBRARIES}
+target_link_libraries(teleop_gazebo_plugin ${GAZEBO_LIBRARIES}
     ${OGRE_LIBRARIES}
     ${OGRE-Terrain_LIBRARIES}
     ${QT_LIBRARIES}
     ${PROTOBUF_LIBRARIES})
 
-add_library(launcher SHARED Launcher.cc)
-target_link_libraries(launcher ${GAZEBO_LIBRARIES})
+add_library(launcher_gazebo_plugin SHARED Launcher.cc)
+target_link_libraries(launcher_gazebo_plugin ${GAZEBO_LIBRARIES})
+
+install(
+  TARGETS
+    teleop_gazebo_plugin
+    launcher_gazebo_plugin
+  LIBRARY DESTINATION
+    ${CATKIN_PACKAGE_LIB_DESTINATION}
+)
