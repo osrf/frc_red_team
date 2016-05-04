@@ -4,11 +4,16 @@ project(frcred_gazebo)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED)
+find_package(catkin REQUIRED COMPONENTS
+  roscpp
+  geometry_msgs
+  gazebo_plugins
+)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
+find_package(gazebo REQUIRED)
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -97,13 +102,21 @@ find_package(catkin REQUIRED)
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES frcred_gazebo
+  LIBRARIES
+  camera_teleop_plugin
 #  CATKIN_DEPENDS other_catkin_pkg
 #  DEPENDS system_lib
 )
+include_directories(include
+  ${Boost_INCLUDE_DIRS}
+  ${catkin_INCLUDE_DIRS}
+  ${GAZEBO_INCLUDE_DIRS})
+
+add_library(camera_teleop_plugin plugins/CameraTeleopPlugin.cc)
+target_link_libraries(camera_teleop_plugin ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} ${Boost_LIBRARIES})
 
 install(DIRECTORY
-  launch worlds
+  launch worlds models scripts
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 
