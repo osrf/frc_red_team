@@ -7,8 +7,12 @@
     <arg name="extra_gazebo_args" value="$(arg extra_gazebo_args)" />
   </include>
 
-  <!-- Drive around -->
+  <!-- keyb -->
   <node name="diffy_teleop" pkg="frcred_gazebo" type="diffy_teleop.py" output="screen" />
+
+  <!-- stick -->
+  <node name="red_joy_teleop" pkg="red_joy_teleop" type="red_joy_teleop" output="screen" />
+  <node pkg="joy" type="joy_node" name="joystick"/>
 
   <include file="$(find frcred_gazebo)/launch/include/diffy.launch.xml" />
 </launch>
