@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.3)
+  cmake_minimum_required(VERSION 2.8.3)
 project(frcred_gazebo)
 
 ## Find catkin macros and libraries
@@ -105,6 +105,12 @@ catkin_package(
 install(DIRECTORY
   launch worlds models
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
+
+install(
+  PROGRAMS
+    scripts/diffy_teleop.py
+ DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
 ###########

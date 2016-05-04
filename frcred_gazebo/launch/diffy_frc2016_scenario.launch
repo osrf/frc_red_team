@@ -7,5 +7,8 @@
     <arg name="extra_gazebo_args" value="$(arg extra_gazebo_args)" />
   </include>
 
+  <!-- Drive around -->
+  <node name="diffy_teleop" pkg="frcred_gazebo" type="diffy_teleop.py" output="screen" />
+
   <include file="$(find frcred_gazebo)/launch/include/diffy.launch.xml" />
 </launch>
