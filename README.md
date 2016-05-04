@@ -10,8 +10,14 @@ Installation
  * wstool update
  * cd ${HOME}/frc\_ws
 
+
  * catkin init
  * catkin build
  * source install/setup.sh
  * source install/share/frc2016\_competition/setup.sh
 
+Subdirectories
+==============
+
+ * **frcred\_gazebo** ROS package for simulation
+ * **gazebo\_models** gazebo models and plugins
