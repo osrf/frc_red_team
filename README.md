@@ -20,4 +20,4 @@ Subdirectories
 ==============
 
  * **frcred\_gazebo** ROS package for simulation
- * **gazebo\models** gazebo models and plugins
+ * **gazebo\_models** gazebo models and plugins
