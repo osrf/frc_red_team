@@ -6993,6 +6993,6 @@
       <right_joint>wheel_right</right_joint>
       <torque>5</torque>
     </plugin>
-    <plugin name='launcher' filename='liblauncher.so'/>
+    <plugin name='launcher' filename='liblauncher_gazebo_plugin.so'/>
   </model>
 </sdf>

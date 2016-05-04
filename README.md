@@ -8,11 +8,19 @@ Installation
  * wget https://bitbucket.org/osrf/frc\_red\_team/raw/default/frcred.rosinstall -O ./.rosinstall
  * wstool update
  * cd ${HOME}/frc\_ws
-
  * catkin init
- * catkin build
+
+Build
+=====
+ * catkin build --make-args install
  * source install/setup.sh
  * source install/share/frc2016\_competition/setup.sh
+
+Remember to run `catkin build` when changing any code, including launch files
+
+Fun!
+====
+ * diffy launch: roslaunch `frcred_gazebo diffy_frc2016_scenario.launch`
 
 Subdirectories
 ==============
@@ -20,15 +28,11 @@ Subdirectories
  * **frcred\_gazebo** ROS package for simulation
  * **gazebo\_models** gazebo models and plugins
 
-Fun!
-====
+[optional] rosdep gazebo7 remap
+===============================
 
- * diffy launch: roslaunch `frcred\_gazebo diffy\_frc2016\_scenario.launch`
-
-rosdep gazebo7 remap
-====================
-
-Don't use it unless you need some ROS packages that are resolving to gazebo6
+Don't need to use it unless you are using ROS packages that are resolving the
+gazebo key to gazebo5.
 
  * sudo rosdep init
  * sudo wget https://raw.githubusercontent.com/osrf/osrf-rosdep/master/gazebo7/00-gazebo7.list -O /etc/ros/rosdep/sources.list.d/00-gazebo7.list
