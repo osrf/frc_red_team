@@ -20,8 +20,15 @@ Subdirectories
  * **frcred\_gazebo** ROS package for simulation
  * **gazebo\_models** gazebo models and plugins
 
+Fun!
+====
+
+ * diffy launch: roslaunch `frcred\_gazebo diffy\_frc2016\_scenario.launch`
+
 rosdep gazebo7 remap
 ====================
+
+Don't use it unless you need some ROS packages that are resolving to gazebo6
 
  * sudo rosdep init
  * sudo wget https://raw.githubusercontent.com/osrf/osrf-rosdep/master/gazebo7/00-gazebo7.list -O /etc/ros/rosdep/sources.list.d/00-gazebo7.list
