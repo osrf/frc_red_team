@@ -103,7 +103,7 @@ catkin_package(
 )
 
 install(DIRECTORY
-  launch worlds
+  launch worlds models
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 
