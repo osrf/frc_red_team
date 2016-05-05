@@ -59,7 +59,7 @@ private:
 };
 
 Teleop::Teleop():
-  ph_("~"),
+  ph_(),
   linear_(1),
   angular_(0),
   deadman_axis_(4),
