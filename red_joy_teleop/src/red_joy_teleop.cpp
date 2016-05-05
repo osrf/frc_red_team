@@ -75,8 +75,8 @@ Teleop::Teleop():
   deadman_pressed_ = false;
   zero_twist_published_ = false;
 
-  vel_pub_ = ph_.advertise<geometry_msgs::Twist>("/cmd_vel", 1, true);
-  joy_sub_ = nh_.subscribe<sensor_msgs::Joy>("/joy", 10, &Teleop::joyCallback, this);
+  vel_pub_ = ph_.advertise<geometry_msgs::Twist>("cmd_vel", 1, true);
+  joy_sub_ = nh_.subscribe<sensor_msgs::Joy>("joy", 10, &Teleop::joyCallback, this);
 
   timer_ = nh_.createTimer(ros::Duration(0.1), boost::bind(&Teleop::publish, this));
 }
