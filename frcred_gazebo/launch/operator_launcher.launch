@@ -1,0 +1,13 @@
+<launch>
+  <group ns="launcher_robot">
+    <!-- plan b: keyb -->
+    <!-- <node name="diffy_teleop" pkg="frcred_gazebo" type="diffy_teleop.py" output="screen" /> -->
+
+    <!-- joystick -->
+    <node name="red_joy_teleop" pkg="red_joy_teleop" type="red_joy_teleop" output="screen" />
+    <node pkg="joy" type="joy_node" name="joystick"/>
+
+    <!-- camera handle -->
+    <node name="keyboard_teleop_pub" pkg="frc_gazebo" type="teleop_pose_keyboard.py" />
+  </group>
+</launch>
