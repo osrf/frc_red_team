@@ -294,7 +294,7 @@
       </collision>
     </link>
     <link name='l_roller_link'>
-      <pose frame=''>-0.06 -0.24 0.08 0 -0 0</pose>
+      <pose frame=''>-0.06 -0.251 0.08 0 -0 0</pose>
       <inertial>
         <mass>2.4325</mass>
         <inertia>
@@ -394,7 +394,7 @@
       </collision>
     </link>
     <link name='r_roller_link'>
-      <pose frame=''>-0.06 0.24 0.08 0 -0 0</pose>
+      <pose frame=''>-0.06 0.251 0.08 0 -0 0</pose>
       <inertial>
         <mass>2.4325</mass>
         <inertia>
@@ -812,7 +812,7 @@
             <erp>0.2</erp>
           </limit>
           <suspension>
-            <cfm>0</cfm>
+            <cfm>0.1</cfm>
             <erp>0.2</erp>
           </suspension>
         </ode>
@@ -845,7 +845,7 @@
             <erp>0.2</erp>
           </limit>
           <suspension>
-            <cfm>0</cfm>
+            <cfm>0.1</cfm>
             <erp>0.2</erp>
           </suspension>
         </ode>
