@@ -2,7 +2,7 @@
 <sdf version='1.6'>
   <model name='powered_rollers'>
     <link name='footprint'>
-      <pose frame=''>0 0 0.015 0 -0 0</pose>
+      <pose frame=''>0 0 -0.026 0 -0 0</pose>
       <inertial>
         <mass>24.213</mass>
         <inertia>
@@ -23,7 +23,7 @@
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <polyline>
-            <height>0.025</height>
+            <height>0.01</height>
             <point>-0.2 -0.400001</point>
             <point>-0.2 -0.2</point>
             <point>-0.400001 -0.2</point>
@@ -39,7 +39,7 @@
             <point>-0.2 -0.400001</point>
           </polyline>
           <polyline>
-            <height>0.025</height>
+            <height>0.01</height>
             <point>-0.0633874 -0.230591</point>
             <point>-0.0614103 -0.2308</point>
             <point>-0.0595507 -0.231408</point>
@@ -1234,7 +1234,7 @@
     <joint name='tilt' type='revolute'>
       <parent>footprint</parent>
       <child>tilt_link</child>
-      <pose frame=''>0.5 0 -0.03 0 -0 0</pose>
+      <pose frame=''>0.4 0 0 0 -0 0</pose>
       <axis>
         <xyz>0 1 0</xyz>
         <use_parent_model_frame>0</use_parent_model_frame>
