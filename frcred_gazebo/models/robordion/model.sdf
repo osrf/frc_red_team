@@ -6955,11 +6955,51 @@
     </joint>
     <static>0</static>
     <allow_auto_disable>1</allow_auto_disable>
+<!--
+    This is to use the diff drive plugin shipped with Gazebo,
+    which talks in Gazebo topics
     <plugin name='diff_drive' filename='libDiffDrivePlugin.so'>
       <left_joint>wheel_left</left_joint>
       <right_joint>wheel_right</right_joint>
       <torque>5</torque>
     </plugin>
-    <plugin name='launcher' filename='liblauncher_gazebo_plugin.so'/>
+-->
+
+    <!-- This is a gazebo_ros plugin which receives commands on a ROS topic -->
+    <plugin name='gazebo_ros_diff_drive' filename='libgazebo_ros_diff_drive.so'>
+      <alwaysOn>true</alwaysOn>
+      <updateRate>100</updateRate>
+      <leftJoint>wheel_left</leftJoint>
+      <rightJoint>wheel_right</rightJoint>
+      <wheelSeparation>0.9</wheelSeparation>
+      <wheelDiameter>0.2</wheelDiameter>
+      <torque>20</torque>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <robotBaseFrame>base_footprint</robotBaseFrame>
+
+      <!-- missing values-->
+      <rosDebugLevel>na</rosDebugLevel>
+      <publishWheelTF>false</publishWheelTF>
+      <publishWheelJointState>false</publishWheelJointState>
+      <wheelAcceleration>0.1</wheelAcceleration>
+      <wheelTorque>5</wheelTorque>
+      <odometrySource>world</odometrySource>
+      <publishTf>1</publishTf>
+    </plugin>
+
+    <!-- Map joystick buttons to gazebo joints -->
+    <plugin name='gazebo_ros_joy_to_joint' filename='libjoy_to_joints_gazebo_plugin.so'>
+      <map button='2' joint='scoop' scale='-0.1' type='position' kp='100' ki='0' kd='10'/>
+      <map button='1' joint='scoop' scale='0.1' type='position' kp='100' ki='0' kd='10'/>
+      <map button='3' joint='rev_A_0_left' scale='0.1' type='position' kp='1500' ki='0' kd='50'/>
+      <map button='0' joint='rev_A_0_left' scale='-0.1' type='position' kp='1500' ki='0' kd='50'/>
+      <map button='3' joint='rev_A_0_right' scale='0.1' type='position' kp='1500' ki='0' kd='50'/>
+      <map button='0' joint='rev_A_0_right' scale='-0.1' type='position' kp='1500' ki='0' kd='50'/>
+    </plugin>
+
+<!-- Gazebo GUI plugin to control the manipulation joints
+   <plugin name='launcher' filename='liblauncher_gazebo_plugin.so'/> -->
   </model>
 </sdf>

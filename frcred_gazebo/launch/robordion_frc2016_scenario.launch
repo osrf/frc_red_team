@@ -7,5 +7,9 @@
     <arg name="extra_gazebo_args" value="$(arg extra_gazebo_args)" />
   </include>
 
+  <!-- stick -->
+  <node name="red_joy_teleop" pkg="red_joy_teleop" type="red_joy_teleop" output="screen" />
+  <node pkg="joy" type="joy_node" name="joystick"/>
+
   <include file="$(find frcred_gazebo)/launch/include/robordion.launch.xml" />
 </launch>
