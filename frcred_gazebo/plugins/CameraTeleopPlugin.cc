@@ -53,8 +53,7 @@ namespace gazebo
 
       this->gazebo_ros_ = GazeboRosPtr(new GazeboRos(_parent, _sdf, "CameraTeleop"));
 
-      // TODO Namespacing
-      cam_teleop_sub_ = gazebo_ros_->node()->subscribe("/camera_pan_tilt/cmd_vel", 1000, &CameraTeleopPlugin::cmdCallback, this);
+      cam_teleop_sub_ = gazebo_ros_->node()->subscribe("camera_pan_tilt/control", 1000, &CameraTeleopPlugin::cmdCallback, this);
 
       // Store the pointer to the model
       this->model = _parent;

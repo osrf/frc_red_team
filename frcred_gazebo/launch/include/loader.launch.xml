@@ -10,6 +10,12 @@
   <node name="red_joy_teleop" pkg="red_joy_teleop" type="red_joy_teleop" output="screen" />
   <node pkg="joy" type="joy_node" name="joystick"/>
 
+  <!-- camera handle -->
+  <node name="keyboard_teleop_pub" pkg="frc_gazebo" type="teleop_pose_keyboard.py" />
+  <!-- TODO: remove when the camera is on the robot -->
+  <node name="urdf_camera_loader" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+      args="-sdf -x $(arg x) -y $(arg y) -z 0 -model camera_loader -file $(find frcred_gazebo)/models/pan_tilt_camera/model.sdf" />
+
   <!-- TODO: complete with the real model -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
       args="-sdf -x $(arg x) -y $(arg y) -z 0 -model loader -file $(find frcred_gazebo)/models/diffy/model.sdf "/>

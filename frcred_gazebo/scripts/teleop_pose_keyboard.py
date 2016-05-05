@@ -62,7 +62,7 @@ if __name__=="__main__":
     settings = termios.tcgetattr(sys.stdin)
     pose = Pose()
     rospy.init_node('teleop_pose_keyboard')
-    pub = rospy.Publisher('/camera_pan_tilt/cmd_vel', Pose, queue_size = 1)
+    pub = rospy.Publisher('camera_pan_tilt/control', Pose, queue_size = 1)
 
     x = 0
     y = 0
