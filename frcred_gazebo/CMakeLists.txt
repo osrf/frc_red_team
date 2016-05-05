@@ -40,6 +40,7 @@ install(
 install(
   PROGRAMS
     scripts/diffy_teleop.py
+    scripts/teleop_pose_keyboard.py
  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
