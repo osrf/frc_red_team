@@ -1,8 +1,10 @@
 <launch>
+  <arg name="x" />
+  <arg name="y" />
 
-  <arg name="x" default="-1.0" />
-  <arg name="y" default="-1.0" />
-
-  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-      args="-sdf -x $(arg x) -y $(arg y) -z 0 -model Robordion -file $(find frcred_gazebo)/models/robordion/model.sdf "/>
+  <group ns="robordion_robot">
+    <!-- TODO: add controllers for joints -->
+    <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+        args="-sdf -x $(arg x) -y $(arg y) -z 0 -model Robordion -file $(find frcred_gazebo)/models/robordion/model.sdf "/>
+  </group>
 </launch>

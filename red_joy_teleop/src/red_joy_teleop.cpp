@@ -58,7 +58,7 @@ private:
 };
 
 Teleop::Teleop():
-  ph_("~"),
+  ph_(),
   linear_(1),
   angular_(0),
   l_scale_(0.3),
@@ -71,8 +71,8 @@ Teleop::Teleop():
 
   zero_twist_published_ = false;
 
-  vel_pub_ = ph_.advertise<geometry_msgs::Twist>("/cmd_vel", 1, true);
-  joy_sub_ = nh_.subscribe<sensor_msgs::Joy>("/joy", 10, &Teleop::joyCallback, this);
+  vel_pub_ = ph_.advertise<geometry_msgs::Twist>("cmd_vel", 1, true);
+  joy_sub_ = nh_.subscribe<sensor_msgs::Joy>("joy", 10, &Teleop::joyCallback, this);
 
   timer_ = nh_.createTimer(ros::Duration(0.1), boost::bind(&Teleop::publish, this));
 }

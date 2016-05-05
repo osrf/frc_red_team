@@ -89,7 +89,7 @@ def vels(speed,turn):
 
 if __name__=="__main__":
 
-    topic = '/cmd_vel'
+    topic = 'cmd_vel'
 #    if len(sys.argv) > 1:
 #      topic = sys.argv[1]
 

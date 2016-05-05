@@ -1,6 +1,6 @@
 Installation
 ============
- * sudo apt-get install ros-jade-joy libignition-msgs-dev python-catkin-tools python-wstool python-rosinstall-generator ros-jade-gazebo7-ros-pkgs ros-jade-joy
+ * sudo apt-get install ros-jade-joy libignition-msgs-dev python-catkin-tools python-wstool python-rosinstall-generator ros-jade-gazebo7-ros-pkgs
  * (temporary workaround) Install ignition-transport from default
  * . /opt/ros/jade/setup.bash
  * mkdir -p ${HOME}/frc\_ws/src
@@ -25,7 +25,10 @@ Remember to run `catkin build` when changing any code, including launch files
 
 Fun!
 ====
- * diffy launch: roslaunch `frcred_gazebo diffy_frc2016_scenario.launch`
+ * contest server: `roslaunch frcred_gazebo contest.launch`
+ * laptop operating robordion: `roslaunch frcred_gazebo operator_robordion.launch`
+ * laptop operating launcher: `roslaunch frcred_gazebo operator_launcher.launch`
+ * laptop operating loader: `roslaunch frcred_gazebo operator_loader.launch`
 
 Subdirectories
 ==============
