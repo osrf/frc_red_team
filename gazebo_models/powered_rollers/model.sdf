@@ -406,7 +406,7 @@
         </inertia>
         <pose frame=''>0 0 0 0 -0 0</pose>
       </inertial>
-      <pose frame=''>-0.000169 -0.428652 0.1 1.5708 0.033305 -0.00022</pose>
+      <pose frame=''>-0.000169 -0.428652 0.08 1.5708 0.033305 -0.00022</pose>
       <self_collide>0</self_collide>
       <enable_wind>0</enable_wind>
       <kinematic>0</kinematic>
@@ -506,7 +506,7 @@
         </inertia>
         <pose frame=''>0 0 0 0 -0 0</pose>
       </inertial>
-      <pose frame=''>0.49 -0.000151 0.03 -1.1e-05 0.033299 -0.000462</pose>
+      <pose frame=''>0.49 -0.000151 0.04 -1.1e-05 0.033299 -0.000462</pose>
       <self_collide>0</self_collide>
       <enable_wind>0</enable_wind>
       <kinematic>0</kinematic>
@@ -604,7 +604,7 @@
         </inertia>
         <pose frame=''>0 0 0 0 -0 0</pose>
       </inertial>
-      <pose frame=''>0.000169 0.428655 0.1 1.57078 0.066604 -0.00068</pose>
+      <pose frame=''>0.000169 0.428655 0.08 1.57078 0.066604 -0.00068</pose>
       <self_collide>0</self_collide>
       <enable_wind>0</enable_wind>
       <kinematic>0</kinematic>
