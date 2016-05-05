@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <sdf version='1.6'>
-  <model name='powered_rollers'>
+  <model name='canon'>
     <link name='footprint'>
       <pose frame=''>0 0 -0.026 0 -0 0</pose>
       <inertial>
