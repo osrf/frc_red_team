@@ -1,0 +1,28 @@
+<launch>
+  <arg name="gzname" default="gazebo"/>
+  <arg name="extra_gazebo_args" default="--verbose"/>
+
+  <include file="$(find frc2016_competition)/launch/frc2016.launch">
+    <arg name="gzname" value="$(arg gzname)" />
+    <arg name="extra_gazebo_args" value="$(arg extra_gazebo_args)" />
+  </include>
+  
+  <group ns="red_team">
+    <arg name="y_all" default="-0.8"/>
+
+    <include file="$(find frcred_gazebo)/launch/include/loader.launch.xml">
+      <arg name="x" default="3.0" />
+      <arg name="y" default="$(arg y_all)" />
+    </include>
+
+    <include file="$(find frcred_gazebo)/launch/include/robordion.launch.xml">
+      <arg name="x" default="0.0" />
+      <arg name="y" default="$(arg y_all)" />
+    </include>
+
+    <include file="$(find frcred_gazebo)/launch/include/launcher.launch.xml">
+      <arg name="x" default="-1.0" />
+      <arg name="y" default="$(arg y_all)" />
+    </include>
+  </group>
+</launch>
