@@ -1,6 +1,6 @@
 Installation
 ============
- * sudo apt-get install ros-jade-joy libignition-msgs-dev python-catkin-tools python-wstool python-rosinstall-generator ros-jade-gazebo7-ros-pkgs ros-jade-joy
+ * sudo apt-get install ros-jade-joy libignition-msgs-dev python-catkin-tools python-wstool python-rosinstall-generator ros-jade-gazebo7-ros-pkgs
  * (temporary workaround) Install ignition-transport from default
  * . /opt/ros/jade/setup.bash
  * mkdir -p ${HOME}/frc\_ws/src
