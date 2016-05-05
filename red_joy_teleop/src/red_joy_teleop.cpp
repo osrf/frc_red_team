@@ -72,6 +72,9 @@ Teleop::Teleop():
   ph_.param("scale_angular", a_scale_, a_scale_);
   ph_.param("scale_linear", l_scale_, l_scale_);
 
+  std::cout << "scale_linear: " << l_scale_ << std::endl;
+  std::cout << "scale_angular: " << a_scale_ << std::endl;
+
   deadman_pressed_ = false;
   zero_twist_published_ = false;
 
