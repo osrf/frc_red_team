@@ -1,3 +1,0 @@
-<launch>
-    <include file="$(find frc2016_competition)/launch/frc2016.launch" />
-</launch>
