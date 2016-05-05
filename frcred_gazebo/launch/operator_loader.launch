@@ -8,6 +8,6 @@
     <node pkg="joy" type="joy_node" name="joystick"/>
 
     <!-- camera handle -->
-    <node name="keyboard_teleop_pub" pkg="frc_gazebo" type="teleop_pose_keyboard.py" />
+    <node name="keyboard_teleop_pub" pkg="frcred_gazebo" type="teleop_pose_keyboard.py" />
   </group>
 </launch>
