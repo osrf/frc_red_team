@@ -28,8 +28,8 @@
             <point>-0.2 -0.2</point>
             <point>-0.400001 -0.2</point>
             <point>-0.400001 -0.1</point>
-            <point>-0.1 -0.1</point>
-            <point>-0.1 0.1</point>
+            <point>0.1 -0.1</point>
+            <point>0.1 0.1</point>
             <point>-0.400001 0.1</point>
             <point>-0.400001 0.2</point>
             <point>-0.2 0.2</point>
@@ -151,8 +151,8 @@
             <point>-0.2 -0.2</point>
             <point>-0.400001 -0.2</point>
             <point>-0.400001 -0.1</point>
-            <point>-0.1 -0.1</point>
-            <point>-0.1 0.1</point>
+            <point>0.1 -0.1</point>
+            <point>0.1 0.1</point>
             <point>-0.400001 0.1</point>
             <point>-0.400001 0.2</point>
             <point>-0.2 0.2</point>
@@ -520,8 +520,8 @@
             <point>-0.2 -0.2</point>
             <point>-0.400001 -0.2</point>
             <point>-0.400001 -0.1</point>
-            <point>-0.1 -0.1</point>
-            <point>-0.1 0.1</point>
+            <point>0.1 -0.1</point>
+            <point>0.1 0.1</point>
             <point>-0.400001 0.1</point>
             <point>-0.400001 0.2</point>
             <point>-0.2 0.2</point>
@@ -643,8 +643,8 @@
             <point>-0.2 -0.2</point>
             <point>-0.400001 -0.2</point>
             <point>-0.400001 -0.1</point>
-            <point>-0.1 -0.1</point>
-            <point>-0.1 0.1</point>
+            <point>0.1 -0.1</point>
+            <point>0.1 0.1</point>
             <point>-0.400001 0.1</point>
             <point>-0.400001 0.2</point>
             <point>-0.2 0.2</point>
