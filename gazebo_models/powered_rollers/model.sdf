@@ -393,7 +393,7 @@
         </surface>
       </collision>
     </link>
-    <link name='link_0'>
+    <link name='l_wheel'>
       <inertial>
         <mass>1.89094</mass>
         <inertia>
@@ -406,7 +406,7 @@
         </inertia>
         <pose frame=''>0 0 0 0 -0 0</pose>
       </inertial>
-      <pose frame=''>-0.000169 -0.428652 -0.002496 1.5708 0.033305 -0.00022</pose>
+      <pose frame=''>-0.000169 -0.428652 0.1 1.5708 0.033305 -0.00022</pose>
       <self_collide>0</self_collide>
       <enable_wind>0</enable_wind>
       <kinematic>0</kinematic>
@@ -479,7 +479,7 @@
               <kp>1e+13</kp>
               <kd>1</kd>
               <max_vel>0.01</max_vel>
-              <min_depth>0</min_depth>
+              <min_depth>0.001</min_depth>
             </ode>
             <bullet>
               <split_impulse>1</split_impulse>
@@ -493,7 +493,7 @@
         </surface>
       </collision>
     </link>
-    <link name='link_0_0'>
+    <link name='center_ball_link'>
       <inertial>
         <mass>1.6326</mass>
         <inertia>
@@ -506,7 +506,7 @@
         </inertia>
         <pose frame=''>0 0 0 0 -0 0</pose>
       </inertial>
-      <pose frame=''>0.329006 -0.000151 -0.098852 -1.1e-05 0.033299 -0.000462</pose>
+      <pose frame=''>0.49 -0.000151 0.03 -1.1e-05 0.033299 -0.000462</pose>
       <self_collide>0</self_collide>
       <enable_wind>0</enable_wind>
       <kinematic>0</kinematic>
@@ -577,7 +577,7 @@
               <kp>1e+13</kp>
               <kd>1</kd>
               <max_vel>0.01</max_vel>
-              <min_depth>0</min_depth>
+              <min_depth>0.001</min_depth>
             </ode>
             <bullet>
               <split_impulse>1</split_impulse>
@@ -591,7 +591,7 @@
         </surface>
       </collision>
     </link>
-    <link name='link_0_clone'>
+    <link name='r_wheel'>
       <inertial>
         <mass>1.89094</mass>
         <inertia>
@@ -604,7 +604,7 @@
         </inertia>
         <pose frame=''>0 0 0 0 -0 0</pose>
       </inertial>
-      <pose frame=''>0.000169 0.428655 -0.002504 1.57078 0.066604 -0.00068</pose>
+      <pose frame=''>0.000169 0.428655 0.1 1.57078 0.066604 -0.00068</pose>
       <self_collide>0</self_collide>
       <enable_wind>0</enable_wind>
       <kinematic>0</kinematic>
@@ -677,7 +677,7 @@
               <kp>1e+13</kp>
               <kd>1</kd>
               <max_vel>0.01</max_vel>
-              <min_depth>0</min_depth>
+              <min_depth>0.001</min_depth>
             </ode>
             <bullet>
               <split_impulse>1</split_impulse>
@@ -1341,7 +1341,7 @@
     </link>
     <joint name='center_ball_joint' type='ball'>
       <parent>footprint</parent>
-      <child>link_0_0</child>
+      <child>center_ball_link</child>
       <pose frame=''>0 0 0 0 -0 0</pose>
       <physics>
         <ode>
@@ -1422,9 +1422,9 @@
         </ode>
       </physics>
     </joint>
-    <joint name='left_wheel_joint' type='revolute'>
+    <joint name='r_wheel_joint' type='revolute'>
       <parent>footprint</parent>
-      <child>link_0_clone</child>
+      <child>r_wheel</child>
       <pose frame=''>0 0 0 0 -0 0</pose>
       <axis>
         <xyz>0 0 -1</xyz>
@@ -1488,9 +1488,9 @@
         </ode>
       </physics>
     </joint>
-    <joint name='right_wheel_joint' type='revolute'>
+    <joint name='l_wheel_joint' type='revolute'>
       <parent>footprint</parent>
-      <child>link_0</child>
+      <child>l_wheel</child>
       <pose frame=''>0 0 0 0 -0 0</pose>
       <axis>
         <xyz>0 0 -1</xyz>
