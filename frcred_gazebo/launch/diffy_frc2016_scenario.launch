@@ -20,7 +20,7 @@
       <arg name="y" default="$(arg y)" />
     </include>
 
-    <include file="$(find frcred_gazebo)/launch/include/launcher.launch.xml">
+    <include file="$(find frcred_gazebo)/launch/include/canon.launch.xml">
       <arg name="x" default="-2.0" />
       <arg name="y" default="$(arg y)" />
     </include>

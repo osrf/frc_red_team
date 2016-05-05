@@ -1,5 +1,5 @@
 <launch>
-  <group ns="launcher_robot">
+  <group ns="canon_robot">
     <!-- plan b: keyb -->
     <!-- <node name="diffy_teleop" pkg="frcred_gazebo" type="diffy_teleop.py" output="screen" /> -->
 
