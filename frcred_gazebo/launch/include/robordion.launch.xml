@@ -1,18 +1,9 @@
 <launch>
-    <arg name="x" />
-    <arg name="y" />
+  <arg name="x" />
+  <arg name="y" />
 
-    <group ns="robordion_robot">
-
-    <!-- plan b: keyb -->
-    <!-- <node name="diffy_teleop" pkg="frcred_gazebo" type="diffy_teleop.py" output="screen" /> -->
-
-    <!-- joystick -->
-    <node name="red_joy_teleop" pkg="red_joy_teleop" type="red_joy_teleop" output="screen" />
-    <node pkg="joy" type="joy_node" name="joystick"/>
-
+  <group ns="robordion_robot">
     <!-- TODO: add controllers for joints -->
-
     <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
         args="-sdf -x $(arg x) -y $(arg y) -z 0 -model Robordion -file $(find frcred_gazebo)/models/robordion/model.sdf "/>
   </group>
