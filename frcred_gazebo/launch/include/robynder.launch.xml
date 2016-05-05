@@ -1,0 +1,8 @@
+<launch>
+
+  <arg name="x" default="-1.0" />
+  <arg name="y" default="-1.0" />
+
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+      args="-sdf -x $(arg x) -y $(arg y) -z 0 -model Robynder -file $(find frcred_gazebo)/models/robynder/model.sdf "/>
+</launch>

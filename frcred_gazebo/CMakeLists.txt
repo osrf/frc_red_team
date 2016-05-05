@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.3)
+  cmake_minimum_required(VERSION 2.8.3)
 project(frcred_gazebo)
 
 ## Find catkin macros and libraries
@@ -10,6 +10,8 @@ find_package(catkin REQUIRED COMPONENTS
   gazebo_plugins
 )
 
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+
 find_package(gazebo REQUIRED)
 
 catkin_package(
@@ -17,6 +19,8 @@ catkin_package(
    teleop_gazebo_plugin
    launcher_gazebo_plugin
    camera_teleop_plugin
+    CATKIN_DEPENDS
+      gazebo_plugins
 )
 
 include_directories(include
@@ -36,6 +40,7 @@ install(
   DESTINATION
    ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
+
 
 install(
   PROGRAMS

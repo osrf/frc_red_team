@@ -9,10 +9,10 @@
 
   <!-- stick -->
   <node name="red_joy_teleop" pkg="red_joy_teleop" type="red_joy_teleop" output="screen">
-    <param name="scale_angular" type="double" value="100"/>
-    <param name="scale_linear" type="double" value="-100"/>
+    <param name="scale_angular" type="double" value="1000"/>
+    <param name="scale_linear" type="double" value="-1000"/>
   </node>
   <node pkg="joy" type="joy_node" name="joystick"/>
 
-  <include file="$(find frcred_gazebo)/launch/include/robordion.launch.xml" />
+  <include file="$(find frcred_gazebo)/launch/include/robynder.launch.xml" />
 </launch>
