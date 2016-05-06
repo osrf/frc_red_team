@@ -3983,8 +3983,8 @@
       <map button='0' joint='scoop' scale='0.1' type='position' kp='100' ki='0' kd='10'/>
       <map button='3' joint='lift_left_1' scale='0.2' type='position' kp='2000' ki='0' kd='200'/>
       <map button='3' joint='lift_right_1' scale='0.2' type='position' kp='2000' ki='0' kd='200'/>
-      <map button='3' joint='lift_left_2' scale='0.1' type='position' kp='1000' ki='0' kd='300'/>
-      <map button='3' joint='lift_right_2' scale='0.1' type='position' kp='1000' ki='0' kd='300'/>
+      <map button='3' joint='lift_left_2' scale='0.1' type='position' kp='1400' ki='0' kd='300'/>
+      <map button='3' joint='lift_right_2' scale='0.1' type='position' kp='1400' ki='0' kd='300'/>
       <map button='3' joint='lift_left_3' scale='0.1' type='position' kp='1400' ki='0' kd='300'/>
       <map button='3' joint='lift_right_3' scale='0.1' type='position' kp='1400' ki='0' kd='300'/>
       <map button='3' joint='lift_left_4' scale='0.1' type='position' kp='1400' ki='0' kd='300'/>
