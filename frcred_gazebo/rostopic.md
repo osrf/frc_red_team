@@ -1,5 +1,5 @@
 /red_team/
-   launcher_robot/
+   canon_robot/
        camera/
    image/
        camera_pan_tilt/control
