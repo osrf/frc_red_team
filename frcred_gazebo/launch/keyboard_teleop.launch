@@ -1,5 +1,5 @@
 <launch>
-  <node name="keyboard_teleop_pub" pkg="frc_gazebo" type="teleop_pose_keyboard.py" ns="camera_pan_tilt" />
+  <node name="keyboard_teleop_pub" pkg="frcred_gazebo" type="teleop_pose_keyboard.py" ns="camera_pan_tilt" />
  <arg name="debug" default="false"/>
   <arg name="gui" default="true"/>
   <arg name="headless" default="false"/>
