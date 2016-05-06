@@ -1390,7 +1390,7 @@
           <lower>0</lower>
           <upper>0.2</upper>
           <effort>100</effort>
-          <velocity>0.5</velocity>
+          <velocity>3</velocity>
         </limit>
         <dynamics>
           <spring_reference>0</spring_reference>
@@ -1610,14 +1610,14 @@
       <map button='2' joint='l_roller' scale='-20' type='velocity' kp='222' ki='0' kd='0'/>
       <map button='0' joint='r_roller' scale='-20' type='velocity' kp='222' ki='0' kd='0'/>
       <map button='2' joint='r_roller' scale='-20' type='velocity' kp='222' ki='0' kd='0'/>
-      <map button='0' joint='feed_ball' scale='-0.2' type='position' kp='2222' ki='0' kd='100'/>
-      <map button='2' joint='feed_ball' scale='-0.2' type='position' kp='2222' ki='0' kd='100'/>
+      <map button='0' joint='feed_ball' scale='-1' type='velocity' kp='222' ki='0' kd='0'/>
+      <map button='2' joint='feed_ball' scale='-1' type='velocity' kp='222' ki='0' kd='0'/>
       <!-- feed out -->
-      <map button='4' joint='feed_ball' scale='0.2' type='position' kp='2222' ki='0' kd='100'/>
-      <map button='4' joint='feed_ball' scale='0.2' type='position' kp='2222' ki='0' kd='100'/>
+      <map button='4' joint='feed_ball' scale='0.5' type='velocity' kp='2222' ki='0' kd='0'/>
+      <map button='4' joint='feed_ball' scale='0.5' type='velocity' kp='2222' ki='0' kd='0'/>
       <!-- shoot out -->
-      <map button='5' joint='l_roller' scale='160' type='velocity' kp='222' ki='0' kd='0'/>
-      <map button='5' joint='r_roller' scale='160' type='velocity' kp='222' ki='0' kd='0'/>
+      <map button='5' joint='l_roller' scale='180' type='velocity' kp='222' ki='0' kd='0'/>
+      <map button='5' joint='r_roller' scale='180' type='velocity' kp='222' ki='0' kd='0'/>
       <!-- tilt up -->
       <map button='3' joint='tilt' scale='+0.1' type='position' kp='3333' ki='0' kd='50'/>
       <!-- tilt down -->
