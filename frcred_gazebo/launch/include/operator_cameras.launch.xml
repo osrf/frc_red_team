@@ -2,4 +2,7 @@
   <group ns="camera_stadium">
     <node name="stadium_cam" pkg="image_view" type="image_view" args="image:=image_raw" />
   </group>
+  <group ns="canon_robot/camera_cannon">
+    <node name="canon_cam" pkg="image_view" type="image_view" args="image:=image_raw" />
+  </group>
 </launch>

@@ -5,7 +5,7 @@
 
       <node name="red_joy_teleop" pkg="red_joy_teleop" type="red_joy_teleop" output="screen">
         <param name="scale_angular" type="double" value="10"/>
-        <param name="scale_linear" type="double" value="-10"/>
+        <param name="scale_linear" type="double" value="-30"/>
       </node>
 
       <node pkg="joy" type="joy_node" name="joystick"/>
