@@ -53,7 +53,7 @@ void JoyToJoints::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
         common::PID pid(kp, ki, kd);
         if (info.type == "position")
           controller->SetPositionPID(info.joint->GetScopedName(), pid);
-        else if (info.type == "position")
+        else if (info.type == "velocity")
           controller->SetVelocityPID(info.joint->GetScopedName(), pid);
 
         this->buttons.push_back(info);
