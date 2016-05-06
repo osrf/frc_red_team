@@ -874,12 +874,12 @@
       <publishTf>1</publishTf>
     </plugin>
 
-   <plugin name='gazebo_ros_joy_to_joint' filename='libjoy_to_joints_gazebo_plugin.so'>
+   <plugin name='gazebo_ros_joy_to_joint' filename='libjoy_to_joints_gazebo_plugin_loader.so'>
       <!-- scoop -->
-      <map button='2' joint='hinge'   scale='-0.1' type='position' kp='100' ki='0' kd='10'/>
-      <map button='0' joint='hinge'   scale='0.1' type='position' kp='100' ki='0' kd='10'/>
-      <map button='3' joint='hinge_2' scale='0.1' type='position' kp='100' ki='0' kd='10'/>
-      <map button='1' joint='hinge_2' scale='-0.1' type='position' kp='100' ki='0' kd='10'/>
+      <map button='2' joint='hinge'   scale='-1' type='position' kp='100' ki='0' kd='10'/>
+      <map button='0' joint='hinge'   scale='1' type='position' kp='100' ki='0' kd='10'/>
+      <map button='3' joint='hinge_2' scale='1' type='position' kp='100' ki='0' kd='10'/>
+      <map button='1' joint='hinge_2' scale='-1' type='position' kp='100' ki='0' kd='10'/>
 
       <!--
 

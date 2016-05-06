@@ -13,10 +13,15 @@ target_link_libraries(joy_to_joints_gazebo_plugin ${GAZEBO_LIBRARIES})
 add_library(joy_to_joints_gazebo_plugin_canon SHARED JoyToJointsCanon.cc)
 target_link_libraries(joy_to_joints_gazebo_plugin_canon ${GAZEBO_LIBRARIES})
 
+add_library(joy_to_joints_gazebo_plugin_loader SHARED JoyToJointsLoader.cc)
+target_link_libraries(joy_to_joints_gazebo_plugin_canon ${GAZEBO_LIBRARIES})
+
+
 install(
   TARGETS
     joy_to_joints_gazebo_plugin
     joy_to_joints_gazebo_plugin_canon
+    joy_to_joints_gazebo_plugin_loader
   LIBRARY DESTINATION
     ${CATKIN_PACKAGE_LIB_DESTINATION}
 )
