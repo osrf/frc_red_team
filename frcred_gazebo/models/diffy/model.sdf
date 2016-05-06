@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <sdf version='1.6'>
-  <model name='loader8'>
+  <model name='diffy'>
     <link name='base'>
       <inertial>
         <mass>1.88436</mass>
@@ -860,7 +860,7 @@
       <rightJoint>joint_1</rightJoint>
       <wheelSeparation>0.5380</wheelSeparation>
       <wheelDiameter>0.2410</wheelDiameter>
-      <torque>20</torque>
+      <torque>50</torque>
       <commandTopic>cmd_vel</commandTopic>
       <odometryTopic>odom</odometryTopic>
       <odometryFrame>odom</odometryFrame>
@@ -869,7 +869,7 @@
       <publishWheelTF>false</publishWheelTF>
       <publishWheelJointState>false</publishWheelJointState>
       <wheelAcceleration>0.1</wheelAcceleration>
-      <wheelTorque>5</wheelTorque>
+      <wheelTorque>50</wheelTorque>
       <odometrySource>world</odometrySource>
       <publishTf>1</publishTf>
       <robotNamespace>/diffy/loader_robot/</robotNamespace>

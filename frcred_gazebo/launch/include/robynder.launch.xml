@@ -1,0 +1,9 @@
+<launch>
+  <arg name="x" />
+  <arg name="y" />
+  
+  <group ns="robynder_robot">
+      <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+	  args="-sdf -x $(arg x) -y $(arg y) -z 0 -model Robynder -file $(find frcred_gazebo)/models/robynder/model.sdf "/>
+  </group>
+</launch>

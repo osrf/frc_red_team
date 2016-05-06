@@ -15,12 +15,12 @@
       <arg name="y" default="$(arg y_all)" />
     </include>
 
-    <include file="$(find frcred_gazebo)/launch/include/robordion.launch.xml">
+    <include file="$(find frcred_gazebo)/launch/include/robynder.launch.xml">
       <arg name="x" default="0.0" />
       <arg name="y" default="$(arg y_all)" />
     </include>
 
-    <include file="$(find frcred_gazebo)/launch/include/launcher.launch.xml">
+    <include file="$(find frcred_gazebo)/launch/include/canon.launch.xml">
       <arg name="x" default="-1.0" />
       <arg name="y" default="$(arg y_all)" />
     </include>

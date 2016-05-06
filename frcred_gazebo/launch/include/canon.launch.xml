@@ -1,0 +1,14 @@
+<launch>
+  <arg name="x" />
+  <arg name="y" />
+
+  <group ns="canon_robot">
+    <!-- TODO: remove when the camera is on the robot -->
+    <node name="urdf_camera_canon" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+        args="-sdf -x $(arg x) -y $(arg y) -z 0 -model camera_canon -file $(find frcred_gazebo)/models/pan_tilt_camera/model.sdf" />
+
+    <!-- TODO: complete with the real model -->
+    <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+        args="-sdf -x $(arg x) -y $(arg y) -z 0 -model canon -file $(find frcred_gazebo)/models/canon/model.sdf "/>
+  </group>
+</launch>
