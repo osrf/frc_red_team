@@ -67,7 +67,8 @@ void JoyToJoints::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
   this->gazeboRos = GazeboRosPtr(new GazeboRos(_model, _sdf, "JoyToJoint"));
   this->gazeboRos->isInitialized();
 
-  auto subOpts = ros::SubscribeOptions::create<sensor_msgs::Joy>("joy", 1,
+  // TODO: ugly ugly hack. look into the problem with ns later
+  auto subOpts = ros::SubscribeOptions::create<sensor_msgs::Joy>("/red_team/robynder_robot/joy", 1,
               boost::bind(&JoyToJoints::OnJoy, this, _1),
               ros::VoidPtr(), &this->callbackQueue);
 
