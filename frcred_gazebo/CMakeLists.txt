@@ -41,6 +41,10 @@ install(
    ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 
+install(
+    TARGETS
+   camera_teleop_plugin
+ DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION})
 
 install(
   PROGRAMS
