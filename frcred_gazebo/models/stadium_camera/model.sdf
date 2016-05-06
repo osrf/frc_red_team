@@ -1,7 +1,7 @@
 <?xml version='1.0'?>
 <sdf version='1.6'>
   <model name='stadium_camera'>
-    <pose frame=''>0 0 0 -0.39 -0.2 -0.049</pose>
+    <pose frame=''>0 0 0 -0.20 -0.047 -0.188</pose>
     <link name='camera_link'>
       <pose frame=''>0 0 0.215506 -0.04 0 0.55</pose>
       <inertial>
