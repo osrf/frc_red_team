@@ -2,11 +2,18 @@
   <group ns="red_team">
     <group ns="loader_robot">
       <!-- joystick for driving -->
-      <node name="red_joy_teleop" pkg="red_joy_teleop" type="red_joy_teleop" output="screen" />
+
+      <node name="red_joy_teleop" pkg="red_joy_teleop" type="red_joy_teleop" output="screen">
+        <param name="scale_angular" type="double" value="10"/>
+        <param name="scale_linear" type="double" value="-10"/>
+      </node>
+
       <node pkg="joy" type="joy_node" name="joystick"/>
 
       <!-- keyboard for camera -->
       <node name="keyboard_teleop_pub" pkg="frcred_gazebo" type="teleop_pose_keyboard.py" />
     </group>
+
+    <include file="$(find frcred_gazebo)/launch/include/operator_cameras.launch.xml" />
   </group>
 </launch>

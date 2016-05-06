@@ -1,17 +1,17 @@
 #include <iostream>
-#include "JoyToJoints.hh"
+#include "JoyToJointsCanon.hh"
 
 using namespace gazebo;
 
-GZ_REGISTER_MODEL_PLUGIN(JoyToJoints)
+GZ_REGISTER_MODEL_PLUGIN(JoyToJointsCanon)
 
 /////////////////////////////////////////////////
-JoyToJoints::JoyToJoints()
+JoyToJointsCanon::JoyToJointsCanon()
 {
 }
 
 /////////////////////////////////////////////////
-JoyToJoints::~JoyToJoints()
+JoyToJointsCanon::~JoyToJointsCanon()
 {
   this->alive = false;
   this->callbackQueue.clear();
@@ -21,7 +21,7 @@ JoyToJoints::~JoyToJoints()
 }
 
 /////////////////////////////////////////////////
-void JoyToJoints::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
+void JoyToJointsCanon::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
 {
   this->model = _model;
   auto controller = this->model->GetJointController();
@@ -68,20 +68,20 @@ void JoyToJoints::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
   this->gazeboRos->isInitialized();
 
   // TODO: ugly ugly hack. look into the problem with ns later
-  auto subOpts = ros::SubscribeOptions::create<sensor_msgs::Joy>("/red_team/robynder_robot/joy", 1,
-              boost::bind(&JoyToJoints::OnJoy, this, _1),
+  auto subOpts = ros::SubscribeOptions::create<sensor_msgs::Joy>("/red_team/canon_robot/joy", 1,
+              boost::bind(&JoyToJointsCanon::OnJoy, this, _1),
               ros::VoidPtr(), &this->callbackQueue);
 
   this->joySub = this->gazeboRos->node()->subscribe(subOpts);
 
   this->callbackQueueThread =
-      std::thread(std::bind(&JoyToJoints::QueueThread, this));
+      std::thread(std::bind(&JoyToJointsCanon::QueueThread, this));
 
   this->alive = true;
 }
 
 /////////////////////////////////////////////////
-void JoyToJoints::OnJoy(const sensor_msgs::Joy::ConstPtr &_msg)
+void JoyToJointsCanon::OnJoy(const sensor_msgs::Joy::ConstPtr &_msg)
 {
   for (auto &button : this->buttons)
   {
@@ -110,7 +110,7 @@ void JoyToJoints::OnJoy(const sensor_msgs::Joy::ConstPtr &_msg)
 }
 
 /////////////////////////////////////////////////
-void JoyToJoints::QueueThread()
+void JoyToJointsCanon::QueueThread()
 {
   static const double timeout = 0.01;
 

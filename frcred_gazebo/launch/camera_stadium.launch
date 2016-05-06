@@ -1,0 +1,9 @@
+<launch>
+   <arg name="x" />
+   <arg name="y" />
+   <arg name="z" />
+
+   <node name="urdf_camera_loader" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+      args="-sdf -x $(arg x) -y $(arg y) -z $(arg z) 
+            -model camera_stadium -file $(find frcred_gazebo)/models/stadium_camera/model.sdf" />
+</launch>

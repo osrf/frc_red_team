@@ -12,5 +12,5 @@
     <arg name="headless" value="$(arg headless)"/>
   </include>
 
-  <include file="$(find frcred_gazebo)/launch/include/diffy.launch.xml" />
+  <include file="$(find frcred_gazebo)/launch/include/loader.launch.xml" />
 </launch>
