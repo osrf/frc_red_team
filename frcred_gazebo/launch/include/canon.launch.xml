@@ -4,6 +4,6 @@
 
   <group ns="canon_robot">
     <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-        args="-sdf -x $(arg x) -y $(arg y) -z 0 -model canon -file $(find frcred_gazebo)/models/canon_camera/model.sdf "/>
+        args="-sdf -x $(arg x) -y $(arg y) -z 0 -model canon -file $(find frcred_gazebo)/models/canon/model.sdf "/>
   </group>
 </launch>
