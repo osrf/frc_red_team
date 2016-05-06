@@ -1516,5 +1516,50 @@
     </joint>
     <static>0</static>
     <allow_auto_disable>1</allow_auto_disable>
+    <plugin name='gazebo_ros_diff_drive' filename='libgazebo_ros_diff_drive.so'>
+      <alwaysOn>true</alwaysOn>
+      <updateRate>100</updateRate>
+      <leftJoint>l_wheel_joint</leftJoint>
+      <rightJoint>r_wheel_joint</rightJoint>
+      <wheelSeparation>0.857307</wheelSeparation>
+      <wheelDiameter>0.233642</wheelDiameter>
+      <torque>1000</torque>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <robotBaseFrame>base_footprint</robotBaseFrame>
+      <rosDebugLevel>na</rosDebugLevel>
+      <publishWheelTF>false</publishWheelTF>
+      <publishWheelJointState>false</publishWheelJointState>
+      <wheelAcceleration>1</wheelAcceleration>
+      <wheelTorque>1000</wheelTorque>
+      <odometrySource>world</odometrySource>
+      <publishTf>1</publishTf>
+    </plugin>
+    <plugin name='gazebo_ros_joy_to_joint_canon' filename='libjoy_to_joints_gazebo_plugin_canon.so'>
+      <!-- stop rollers -->
+      <map button='6' joint='l_roller' scale='0' type='velocity' kp='222' ki='0' kd='0'/>
+      <map button='7' joint='l_roller' scale='0' type='velocity' kp='222' ki='0' kd='0'/>
+      <map button='6' joint='r_roller' scale='0' type='velocity' kp='222' ki='0' kd='0'/>
+      <map button='7' joint='r_roller' scale='0' type='velocity' kp='222' ki='0' kd='0'/>
+      <!-- feed in -->
+      <map button='0' joint='l_roller' scale='-20' type='velocity' kp='222' ki='0' kd='0'/>
+      <map button='2' joint='l_roller' scale='-20' type='velocity' kp='222' ki='0' kd='0'/>
+      <map button='0' joint='r_roller' scale='-20' type='velocity' kp='222' ki='0' kd='0'/>
+      <map button='2' joint='r_roller' scale='-20' type='velocity' kp='222' ki='0' kd='0'/>
+      <map button='0' joint='feed_ball' scale='0' type='position' kp='2222' ki='0' kd='100'/>
+      <map button='2' joint='feed_ball' scale='0' type='position' kp='2222' ki='0' kd='100'/>
+      <!-- feed out -->
+      <map button='4' joint='feed_ball' scale='0.2' type='position' kp='2222' ki='0' kd='100'/>
+      <map button='4' joint='feed_ball' scale='0.2' type='position' kp='2222' ki='0' kd='100'/>
+      <!-- shoot out -->
+      <map button='5' joint='l_roller' scale='200' type='velocity' kp='222' ki='0' kd='0'/>
+      <map button='5' joint='r_roller' scale='200' type='velocity' kp='222' ki='0' kd='0'/>
+      <!-- tilt up -->
+      <map button='3' joint='tilt' scale='+0.1' type='position' kp='3333' ki='0' kd='50'/>
+      <!-- tilt down -->
+      <map button='1' joint='tilt' scale='-0.1' type='position' kp='3333' ki='0' kd='50'/>
+      <robotNamespace>/</robotNamespace>
+    </plugin>
   </model>
 </sdf>

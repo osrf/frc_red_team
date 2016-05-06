@@ -2,8 +2,8 @@
   <group ns="red_team">
     <group ns="canon_robot">
       <!-- joystick for driving -->
-      <node name="red_joy_teleop" pkg="red_joy_teleop" type="red_joy_teleop" output="screen" />
-      <node pkg="joy" type="joy_node" name="joystick"/>
+      <node name="red_joy_teleop_canon" pkg="red_joy_teleop" type="red_joy_teleop" output="screen" />
+      <node pkg="joy" type="joy_node" name="joystick_canon"/>
 
       <!-- keyboard for camera -->
       <node name="keyboard_teleop_pub" pkg="frcred_gazebo" type="teleop_pose_keyboard.py" />
