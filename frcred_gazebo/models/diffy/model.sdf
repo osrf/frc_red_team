@@ -864,7 +864,7 @@
       <commandTopic>cmd_vel</commandTopic>
       <odometryTopic>odom</odometryTopic>
       <odometryFrame>odom</odometryFrame>
-      <robotBaseFrame>base_footprint</robotBaseFrame>
+      <robotBaseFrame>base</robotBaseFrame>
       <rosDebugLevel>na</rosDebugLevel>
       <publishWheelTF>false</publishWheelTF>
       <publishWheelJointState>false</publishWheelJointState>
@@ -873,5 +873,39 @@
       <odometrySource>world</odometrySource>
       <publishTf>1</publishTf>
     </plugin>
+
+   <plugin name='gazebo_ros_joy_to_joint' filename='libjoy_to_joints_gazebo_plugin.so'>
+      <!-- scoop -->
+      <map button='2' joint='hinge'   scale='-0.1' type='position' kp='100' ki='0' kd='10'/>
+      <map button='0' joint='hinge'   scale='0.1' type='position' kp='100' ki='0' kd='10'/>
+      <map button='3' joint='hinge_2' scale='0.1' type='position' kp='100' ki='0' kd='10'/>
+      <map button='1' joint='hinge_2' scale='-0.1' type='position' kp='100' ki='0' kd='10'/>
+
+      <!--
+
+      lift up
+      <map button='3' joint='lift_left_1' scale='0.2' type='position' kp='2000' ki='0' kd='50'/>
+      <map button='3' joint='lift_right_1' scale='0.2' type='position' kp='2000' ki='0' kd='50'/>
+      <map button='3' joint='lift_left_2' scale='0.1' type='position' kp='1000' ki='0' kd='50'/>
+      <map button='3' joint='lift_right_2' scale='0.1' type='position' kp='1000' ki='0' kd='50'/>
+
+      <map button='1' joint='lift_left_1' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
+      <map button='1' joint='lift_right_1' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
+      <map button='1' joint='lift_left_2' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
+      <map button='1' joint='lift_right_2' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
+      <map button='1' joint='lift_left_3' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
+      <map button='1' joint='lift_right_3' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
+      <map button='1' joint='lift_left_4' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
+      <map button='1' joint='lift_right_4' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
+      <map button='1' joint='lift_left_5' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
+      <map button='1' joint='lift_right_5' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
+      <map button='1' joint='lift_left_6' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
+      <map button='1' joint='lift_right_6' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
+      -->
+
+      <robotNamespace>/</robotNamespace>
+    </plugin>
+
+
   </model>
 </sdf>
