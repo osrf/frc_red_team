@@ -3140,7 +3140,6 @@
       <wheelTorque>1000</wheelTorque>
       <odometrySource>world</odometrySource>
       <publishTf>1</publishTf>
-      <robotNamespace>/</robotNamespace>
     </plugin>
     <plugin name='gazebo_ros_joy_to_joint' filename='libjoy_to_joints_gazebo_plugin.so'>
       <!-- scoop -->
