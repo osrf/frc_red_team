@@ -860,7 +860,7 @@
       <rightJoint>joint_1</rightJoint>
       <wheelSeparation>0.5380</wheelSeparation>
       <wheelDiameter>0.2410</wheelDiameter>
-      <torque>50</torque>
+      <torque>100</torque>
       <commandTopic>cmd_vel</commandTopic>
       <odometryTopic>odom</odometryTopic>
       <odometryFrame>odom</odometryFrame>
@@ -868,8 +868,8 @@
       <rosDebugLevel>na</rosDebugLevel>
       <publishWheelTF>false</publishWheelTF>
       <publishWheelJointState>false</publishWheelJointState>
-      <wheelAcceleration>0.1</wheelAcceleration>
-      <wheelTorque>50</wheelTorque>
+      <wheelAcceleration>1</wheelAcceleration>
+      <wheelTorque>100</wheelTorque>
       <odometrySource>world</odometrySource>
       <publishTf>1</publishTf>
     </plugin>
