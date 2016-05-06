@@ -1,0 +1,5 @@
+<launch>
+    <!-- x:  y: < -8.3 z: 0.5-2.0 -->
+    <node name="urdf_camera_loader" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+        args="-sdf -x 0 -y -10 -z 1 -model camera_stadium -file $(find frcred_gazebo)/models/pan_tilt_camera/model.sdf" />
+</launch>
