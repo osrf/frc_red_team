@@ -6,7 +6,7 @@
     <arg name="gzname" value="$(arg gzname)" />
     <arg name="extra_gazebo_args" value="$(arg extra_gazebo_args)" />
   </include>
-  
+
   <group ns="red_team">
     <arg name="y_all" default="-0.8"/>
 
@@ -17,19 +17,22 @@
       <arg name="z" default="2.0" />
     </include>
 
+    <!-- Loader starts on the right -->
     <include file="$(find frcred_gazebo)/launch/include/loader.launch.xml">
-      <arg name="x" default="3.0" />
-      <arg name="y" default="$(arg y_all)" />
+      <arg name="x" default="2.0" />
+      <arg name="y" default="-1.0" />
     </include>
 
+    <!-- Robynder starts on the other side -->
     <include file="$(find frcred_gazebo)/launch/include/robynder.launch.xml">
-      <arg name="x" default="0.0" />
-      <arg name="y" default="$(arg y_all)" />
+      <arg name="x" default="-3.0" />
+      <arg name="y" default="7.0" />
     </include>
 
+    <!-- Canon starts on the left -->
     <include file="$(find frcred_gazebo)/launch/include/canon.launch.xml">
       <arg name="x" default="-1.0" />
-      <arg name="y" default="$(arg y_all)" />
+      <arg name="y" default="-1.0" />
     </include>
   </group>
 </launch>
