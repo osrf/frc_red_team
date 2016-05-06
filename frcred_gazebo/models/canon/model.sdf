@@ -1549,6 +1549,12 @@
       <map button='2' joint='r_roller' scale='-20' type='velocity' kp='222' ki='0' kd='0'/>
       <map button='0' joint='feed_ball' scale='0' type='position' kp='2222' ki='0' kd='100'/>
       <map button='2' joint='feed_ball' scale='0' type='position' kp='2222' ki='0' kd='100'/>
+      <!-- feed out -->
+      <map button='4' joint='feed_ball' scale='0.2' type='position' kp='2222' ki='0' kd='100'/>
+      <map button='4' joint='feed_ball' scale='0.2' type='position' kp='2222' ki='0' kd='100'/>
+      <!-- shoot out -->
+      <map button='5' joint='l_roller' scale='200' type='velocity' kp='222' ki='0' kd='0'/>
+      <map button='5' joint='r_roller' scale='200' type='velocity' kp='222' ki='0' kd='0'/>
       <!-- tilt up -->
       <map button='3' joint='tilt' scale='+0.1' type='position' kp='3333' ki='0' kd='50'/>
       <!-- tilt down -->
