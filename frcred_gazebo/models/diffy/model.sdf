@@ -872,7 +872,6 @@
       <wheelTorque>50</wheelTorque>
       <odometrySource>world</odometrySource>
       <publishTf>1</publishTf>
-      <robotNamespace>/diffy/loader_robot/</robotNamespace>
     </plugin>
   </model>
 </sdf>
