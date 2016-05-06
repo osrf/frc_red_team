@@ -1,6 +1,334 @@
 <?xml version='1.0'?>
 <sdf version='1.6'>
   <model name='diffy'>
+    <link name='camera_link'>
+      <inertial>
+        <mass>4.77215</mass>
+        <inertia>
+          <ixx>0.0113382</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0120839</iyy>
+          <iyz>0</iyz>
+          <izz>0.0115436</izz>
+        </inertia>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+      </inertial>
+      <pose frame=''>-0.954456 -0.00255 -0.152556 -3e-06 0 1.63588</pose>
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <enable_wind>0</enable_wind>
+      <sensor name='camera' type='camera'>
+        <pose frame=''>0 0.1 0 0 -0 1.57</pose>
+        <camera name='__default__'>
+          <horizontal_fov>1.047</horizontal_fov>
+          <image>
+            <width>320</width>
+            <height>240</height>
+          </image>
+          <clip>
+            <near>0.1</near>
+            <far>100</far>
+          </clip>
+        </camera>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+        <visualize>1</visualize>
+        <plugin name='camera_controller' filename='libgazebo_ros_camera.so'>
+          <alwaysOn>true</alwaysOn>
+          <updateRate>0.0</updateRate>
+          <cameraName>camera_cannon</cameraName>
+          <imageTopicName>image_raw</imageTopicName>
+          <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+          <frameName>camera_link</frameName>
+          <hackBaseline>0.07</hackBaseline>
+          <distortionK1>0.0</distortionK1>
+          <distortionK2>0.0</distortionK2>
+          <distortionK3>0.0</distortionK3>
+          <distortionT1>0.0</distortionT1>
+          <distortionT2>0.0</distortionT2>
+          <robotNamespace>/red_team/loader_robot/</robotNamespace>
+        </plugin>
+      </sensor>
+      <visual name='visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.124303 0.116517 0.122208</size>
+          </box>
+        </geometry>
+        <material>
+          <lighting>1</lighting>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+          <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>0.01 0.01 0.01 1</specular>
+          <emissive>0 0 0 1</emissive>
+          <shader type='vertex'>
+            <normal_map>__default__</normal_map>
+          </shader>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name='ModelPreview_0::camera_link::visual_1'>
+        <pose frame=''>0 0.08 0 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.052595</radius>
+            <length>0.06</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <lighting>1</lighting>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+          <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>0.01 0.01 0.01 1</specular>
+          <emissive>0 0 0 1</emissive>
+          <shader type='vertex'>
+            <normal_map>__default__</normal_map>
+          </shader>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name='ModelPreview_0::camera_link::visual_1'>
+        <pose frame=''>0 0.08 0 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.052595</radius>
+            <length>0.06</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <lighting>1</lighting>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+          <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>0.01 0.01 0.01 1</specular>
+          <emissive>0 0 0 1</emissive>
+          <shader type='vertex'>
+            <normal_map>__default__</normal_map>
+          </shader>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name='visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.124303 0.116517 0.122208</size>
+          </box>
+        </geometry>
+        <material>
+          <lighting>1</lighting>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+          <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>0.01 0.01 0.01 1</specular>
+          <emissive>0 0 0 1</emissive>
+          <shader type='vertex'>
+            <normal_map>__default__</normal_map>
+          </shader>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name='visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.124303 0.116517 0.122208</size>
+          </box>
+        </geometry>
+        <material>
+          <lighting>1</lighting>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+          <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>0.01 0.01 0.01 1</specular>
+          <emissive>0 0 0 1</emissive>
+          <shader type='vertex'>
+            <normal_map>__default__</normal_map>
+          </shader>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name='ModelPreview_0::camera_link::visual_1'>
+        <pose frame=''>0 0.08 0 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.052595</radius>
+            <length>0.06</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <lighting>1</lighting>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+          <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>0.01 0.01 0.01 1</specular>
+          <emissive>0 0 0 1</emissive>
+          <shader type='vertex'>
+            <normal_map>__default__</normal_map>
+          </shader>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name='ModelPreview_0::camera_link::visual_1'>
+        <pose frame=''>0 0.08 0 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.052595</radius>
+            <length>0.06</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <lighting>1</lighting>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+          <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>0.01 0.01 0.01 1</specular>
+          <emissive>0 0 0 1</emissive>
+          <shader type='vertex'>
+            <normal_map>__default__</normal_map>
+          </shader>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name='ModelPreview_0::camera_link::visual_1'>
+        <pose frame=''>0 0.08 0 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.052595</radius>
+            <length>0.06</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <lighting>1</lighting>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+          <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>0.01 0.01 0.01 1</specular>
+          <emissive>0 0 0 1</emissive>
+          <shader type='vertex'>
+            <normal_map>__default__</normal_map>
+          </shader>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name='visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.124303 0.116517 0.122208</size>
+          </box>
+        </geometry>
+        <material>
+          <lighting>1</lighting>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+          <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>0.01 0.01 0.01 1</specular>
+          <emissive>0 0 0 1</emissive>
+          <shader type='vertex'>
+            <normal_map>__default__</normal_map>
+          </shader>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name='collision_1'>
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame=''>0 0.08 0 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.052595</radius>
+            <length>0.06</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+    </link>
     <link name='base'>
       <inertial>
         <mass>1.88436</mass>
@@ -501,7 +829,7 @@
         </inertia>
         <pose frame=''>0 0 0 0 -0 0</pose>
       </inertial>
-      <pose frame=''>-0.934723 0.178751 -0.304766 -1.5708 0 0</pose>
+      <pose frame=''>-0.934723 0.178751 -0.304766 -1.5708 -0 -0</pose>
       <self_collide>0</self_collide>
       <enable_wind>0</enable_wind>
       <kinematic>0</kinematic>
@@ -598,7 +926,7 @@
         </inertia>
         <pose frame=''>0 0 0 0 -0 0</pose>
       </inertial>
-      <pose frame=''>-0.934723 -0.183413 -0.304766 -1.5708 0 0</pose>
+      <pose frame=''>-0.934723 -0.183413 -0.304766 -1.5708 -0 -0</pose>
       <self_collide>0</self_collide>
       <enable_wind>0</enable_wind>
       <kinematic>0</kinematic>
@@ -685,26 +1013,10 @@
         </surface>
       </collision>
     </link>
-    <joint name='hinge_2' type='revolute'>
+    <joint name='base_JOINT_0' type='fixed'>
       <parent>base</parent>
-      <child>base_clone_clone</child>
-      <pose frame=''>-0.07 0 0 0 -0 0</pose>
-      <axis>
-        <xyz>0 1 0</xyz>
-        <use_parent_model_frame>0</use_parent_model_frame>
-        <limit>
-          <lower>-1.5708</lower>
-          <upper>1.5708</upper>
-          <effort>10</effort>
-          <velocity>-1</velocity>
-        </limit>
-        <dynamics>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-          <damping>0</damping>
-          <friction>0</friction>
-        </dynamics>
-      </axis>
+      <child>camera_link</child>
+      <pose frame=''>0 0 0 0 -0 0</pose>
       <physics>
         <ode>
           <limit>
@@ -739,6 +1051,39 @@
       <parent>base</parent>
       <child>link_2</child>
       <pose frame=''>0 0 0 0 -0 0</pose>
+      <physics>
+        <ode>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+          <suspension>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </suspension>
+        </ode>
+      </physics>
+    </joint>
+    <joint name='hinge_2' type='revolute'>
+      <parent>base</parent>
+      <child>base_clone_clone</child>
+      <pose frame=''>-0.07 0 0 0 -0 0</pose>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <use_parent_model_frame>0</use_parent_model_frame>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.5708</upper>
+          <effort>10</effort>
+          <velocity>-1</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+      </axis>
       <physics>
         <ode>
           <limit>
@@ -872,40 +1217,14 @@
       <wheelTorque>100</wheelTorque>
       <odometrySource>world</odometrySource>
       <publishTf>1</publishTf>
+      <robotNamespace>/red_team/loader_robot/</robotNamespace>
     </plugin>
-
-   <plugin name='gazebo_ros_joy_to_joint' filename='libjoy_to_joints_gazebo_plugin_loader.so'>
-      <!-- scoop -->
-      <map button='2' joint='hinge'   scale='-1' type='position' kp='100' ki='0' kd='10'/>
-      <map button='0' joint='hinge'   scale='1' type='position' kp='100' ki='0' kd='10'/>
+    <plugin name='gazebo_ros_joy_to_joint' filename='libjoy_to_joints_gazebo_plugin_loader.so'>
+      <map button='2' joint='hinge' scale='-1' type='position' kp='100' ki='0' kd='10'/>
+      <map button='0' joint='hinge' scale='1' type='position' kp='100' ki='0' kd='10'/>
       <map button='3' joint='hinge_2' scale='1' type='position' kp='100' ki='0' kd='10'/>
       <map button='1' joint='hinge_2' scale='-1' type='position' kp='100' ki='0' kd='10'/>
-
-      <!--
-
-      lift up
-      <map button='3' joint='lift_left_1' scale='0.2' type='position' kp='2000' ki='0' kd='50'/>
-      <map button='3' joint='lift_right_1' scale='0.2' type='position' kp='2000' ki='0' kd='50'/>
-      <map button='3' joint='lift_left_2' scale='0.1' type='position' kp='1000' ki='0' kd='50'/>
-      <map button='3' joint='lift_right_2' scale='0.1' type='position' kp='1000' ki='0' kd='50'/>
-
-      <map button='1' joint='lift_left_1' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
-      <map button='1' joint='lift_right_1' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
-      <map button='1' joint='lift_left_2' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
-      <map button='1' joint='lift_right_2' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
-      <map button='1' joint='lift_left_3' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
-      <map button='1' joint='lift_right_3' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
-      <map button='1' joint='lift_left_4' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
-      <map button='1' joint='lift_right_4' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
-      <map button='1' joint='lift_left_5' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
-      <map button='1' joint='lift_right_5' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
-      <map button='1' joint='lift_left_6' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
-      <map button='1' joint='lift_right_6' scale='-0.1' type='position' kp='1000' ki='0' kd='50'/>
-      -->
-
       <robotNamespace>/</robotNamespace>
     </plugin>
-
-
   </model>
 </sdf>
