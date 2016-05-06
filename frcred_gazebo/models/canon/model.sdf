@@ -328,6 +328,22 @@
         <cast_shadows>1</cast_shadows>
         <transparency>0</transparency>
       </visual>
+      <visual name='spin_marker'>
+        <pose frame=''>0 0.06 0.035 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.02 0.12 0.02</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
       <collision name='collision'>
         <laser_retro>0</laser_retro>
         <max_contacts>10</max_contacts>
@@ -800,6 +816,22 @@
           <shader type='vertex'>
             <normal_map>__default__</normal_map>
           </shader>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name='spin_marker'>
+        <pose frame=''>0 0.06 0.035 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.02 0.12 0.02</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/White</name>
+          </script>
         </material>
         <cast_shadows>1</cast_shadows>
         <transparency>0</transparency>
@@ -1547,8 +1579,8 @@
       <map button='2' joint='l_roller' scale='-20' type='velocity' kp='222' ki='0' kd='0'/>
       <map button='0' joint='r_roller' scale='-20' type='velocity' kp='222' ki='0' kd='0'/>
       <map button='2' joint='r_roller' scale='-20' type='velocity' kp='222' ki='0' kd='0'/>
-      <map button='0' joint='feed_ball' scale='0' type='position' kp='2222' ki='0' kd='100'/>
-      <map button='2' joint='feed_ball' scale='0' type='position' kp='2222' ki='0' kd='100'/>
+      <map button='0' joint='feed_ball' scale='-0.2' type='position' kp='2222' ki='0' kd='100'/>
+      <map button='2' joint='feed_ball' scale='-0.2' type='position' kp='2222' ki='0' kd='100'/>
       <!-- feed out -->
       <map button='4' joint='feed_ball' scale='0.2' type='position' kp='2222' ki='0' kd='100'/>
       <map button='4' joint='feed_ball' scale='0.2' type='position' kp='2222' ki='0' kd='100'/>
