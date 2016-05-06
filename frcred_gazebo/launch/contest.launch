@@ -11,10 +11,10 @@
     <arg name="y_all" default="-0.8"/>
 
     <!-- camera rules  y: < -8.3 z: 0.5-2.0 -->
-    <include file="$(find frcred_gazebo)/launch/include/camera_stadium.launch">
-      <arg name="x" default="0" />
-      <arg name="y" default="-10" />
-      <arg name="z" default="1" />
+    <include file="$(find frcred_gazebo)/launch/camera_stadium.launch">
+      <arg name="x" default="3.5" />
+      <arg name="y" default="-8.30" />
+      <arg name="z" default="2.0" />
     </include>
 
     <include file="$(find frcred_gazebo)/launch/include/loader.launch.xml">
