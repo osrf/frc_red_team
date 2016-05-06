@@ -20,6 +20,7 @@ Build
  * catkin build --make-args install
  * source install/setup.sh
  * source install/share/frc2016\_competition/setup.sh
+ * source src/frc_red_team/texture_setup.bash
 
 Remember to run `catkin build` when changing any code, including launch files
 
